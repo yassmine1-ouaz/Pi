@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="1085.0" style="-fx-background-color: #c3c0ed;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.GUI.AjouteroeuvreController">
+   <children>
+      <TextField fx:id="titreInput" layoutX="173.0" layoutY="101.0" promptText="Saisir le titre" />
+      <TextField fx:id="nomInput" layoutX="495.0" layoutY="98.0" prefHeight="31.0" prefWidth="187.0" promptText="Saisir le nom" />
+      <TextField fx:id="prixInput" layoutX="173.0" layoutY="149.0" promptText="Saisir le prix" />
+      <Button layoutX="191.0" layoutY="651.0" mnemonicParsing="false" onAction="#ajouterOeuvre" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #faff66ff;" text="Ajouter" textFill="#0b1ba1">
+         <font>
+            <Font name="Matura MT Script Capitals" size="18.0" />
+         </font></Button>
+      <Label layoutX="64.0" layoutY="104.0" text="Titre_oeuvre">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="384.0" layoutY="104.0" text="Artiste" textFill="#111010">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="64.0" layoutY="152.0" prefHeight="25.0" prefWidth="55.0" text="Prix">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="389.0" layoutY="154.0" text="Id_categorie">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id_catInput" layoutX="495.0" layoutY="149.0" prefHeight="31.0" prefWidth="187.0" promptText="saisir id" />
+      <Label layoutX="64.0" layoutY="205.0" text="Etat">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="etatInput" cache="true" cacheHint="QUALITY" layoutX="173.0" layoutY="200.0" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #cced55;" />
+      <Button layoutX="564.0" layoutY="651.0" mnemonicParsing="false" onAction="#afficherOeuvre" prefHeight="41.0" prefWidth="124.0" style="-fx-background-color: #faff66ff;" text="Afficher" textFill="#0b1ba1">
+         <font>
+            <Font name="Matura MT Script Capitals" size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#faff66" layoutX="35.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Oeuvres d'art " wrappingWidth="499.6708984375">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="31.0" />
+         </font>
+      </Text>
+      <ImageView cache="true" fitHeight="161.0" fitWidth="168.0" layoutX="807.0" layoutY="84.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../OneDrive/Bureau/1.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="64.0" layoutY="277.0" prefHeight="350.0" prefWidth="949.0" style="-fx-background-color: #0b1ca0;">
+         <children>
+            <TableView fx:id="tableoeuvre" prefHeight="350.0" prefWidth="949.0" style="-fx-background-color: #fdffb0ff;">
+              <columns>
+                <TableColumn fx:id="Id" prefWidth="51.0" text="Id" />
+                <TableColumn fx:id="titre_oeuvre" prefWidth="139.0" text="titre" />
+                  <TableColumn fx:id="artiste" prefWidth="212.0" text="artiste" />
+                  <TableColumn fx:id="prix_oeuvre" prefWidth="93.0" text="prix" />
+                  <TableColumn fx:id="Id_cat_oeuv" prefWidth="109.0" text="Id_Cat_Oeuv" />
+                  <TableColumn fx:id="Etat1" prefWidth="344.0" text="etat" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button layoutX="774.0" layoutY="651.0" mnemonicParsing="false" onAction="#supprimerOeuvre" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #faff66ff;" text="Supprimer" textFill="#0b1ba1">
+         <font>
+            <Font name="Matura MT Script Capitals" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="360.0" layoutY="651.0" mnemonicParsing="false" onAction="#modifierOeuvre" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #faff66ff;" text="Modifier" textFill="#0b1ba1">
+         <font>
+            <Font name="Matura MT Script Capitals" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="etatInput1" layoutX="495.0" layoutY="200.0" prefHeight="31.0" prefWidth="187.0" promptText="choisir etat" />
+     
+   </children>
+</AnchorPane>
